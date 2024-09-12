@@ -21,8 +21,19 @@ fun triParSelection(liste: List<Int>): MutableList<Int> {
     val listeCopie = liste.toMutableList()
 
     // Algorithme de tri :
-    // A COMPLETER ICI
-
+    var changement = listeCopie[0]
+    for (i in listeCopie.indices){
+        for (j in listeCopie.indices){
+            if (j<i){
+                continue
+            }
+            if (listeCopie[j]<listeCopie[i]){
+                changement = listeCopie[i]
+                listeCopie[i]=listeCopie[j]
+                listeCopie[j]= changement
+            }
+        }
+    }
     return listeCopie
 }
 
