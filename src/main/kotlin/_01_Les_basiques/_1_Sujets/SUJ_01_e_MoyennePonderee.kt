@@ -18,7 +18,12 @@ import _10_Demos_et_tests.testerEnLot
  */
 fun moyennePonderee(listeCoefVal: List<List<Number>>): Double {
     var moyenne = 0.0
-    // A COMPLETER ICI
+    var div = 0.0
+    for (i in listeCoefVal.indices){
+        moyenne += listeCoefVal[i][0].toFloat() * listeCoefVal[i][1].toFloat()
+        div += listeCoefVal[i][0].toInt()
+    }
+    moyenne=moyenne/div
     return moyenne
 }
 
